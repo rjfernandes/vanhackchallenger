@@ -7,14 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1796DDEDC0712908663F9EC1 /* Pods_HackatonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7F2152C6DF638165C922C0 /* Pods_HackatonTests.framework */; };
+		4B8B3D13B6E5F9944678F6B2 /* Pods_HackatonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99011380F37781FAE8A3BA8F /* Pods_HackatonUITests.framework */; };
+		5CE005B698E1D9A1B2DA77F4 /* Pods_Hackaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A00707E4A24B93B3A6A5A6 /* Pods_Hackaton.framework */; };
+		CC685148205D4C35006702C4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685147205D4C35006702C4 /* LoginController.swift */; };
+		CC68514B205D4C49006702C4 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC68514A205D4C49006702C4 /* LoginView.storyboard */; };
+		CC68514F205D4F03006702C4 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68514E205D4F03006702C4 /* BaseController.swift */; };
+		CC685151205D4F10006702C4 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685150205D4F10006702C4 /* BaseTableViewController.swift */; };
+		CC685153205D4F44006702C4 /* BaseGenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685152205D4F44006702C4 /* BaseGenericTableViewController.swift */; };
+		CC685156205D50F9006702C4 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685155205D50F9006702C4 /* LoginPresenter.swift */; };
+		CC685158205D5152006702C4 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685157205D5152006702C4 /* LoginContract.swift */; };
+		CC68515A205D51E5006702C4 /* BasePresenterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685159205D51E5006702C4 /* BasePresenterContract.swift */; };
+		CC68515C205D51F9006702C4 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68515B205D51F9006702C4 /* BasePresenter.swift */; };
+		CC68515E205D5337006702C4 /* HackathonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68515D205D5337006702C4 /* HackathonAPI.swift */; };
+		CC685161205D54DC006702C4 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685160205D54DC006702C4 /* LoginRequestModel.swift */; };
+		CC685164205D562F006702C4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685163205D562F006702C4 /* UIViewController+Extension.swift */; };
+		CC685167205D5703006702C4 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685166205D5703006702C4 /* AppConfig.swift */; };
+		CC68516B205D5A53006702C4 /* HackathonRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68516A205D5A53006702C4 /* HackathonRequestProtocol.swift */; };
+		CC68516E205D5E13006702C4 /* HackathonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68516D205D5E13006702C4 /* HackathonError.swift */; };
+		CC685171205D6563006702C4 /* UnauthenticateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685170205D6563006702C4 /* UnauthenticateAPI.swift */; };
+		CC685175205D6EB9006702C4 /* ProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685174205D6EB9006702C4 /* ProductController.swift */; };
+		CC68517C205D6EF1006702C4 /* ProductResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68517B205D6EF1006702C4 /* ProductResponseModel.swift */; };
+		CC68517F205D6F54006702C4 /* AuthenticateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68517E205D6F54006702C4 /* AuthenticateAPI.swift */; };
+		CC685181205D7047006702C4 /* ProductView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC685180205D7047006702C4 /* ProductView.storyboard */; };
+		CC685184205D724E006702C4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685183205D724E006702C4 /* ProductCell.swift */; };
+		CC685186205D749D006702C4 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685185205D749D006702C4 /* ProductPresenter.swift */; };
+		CC685188205D750C006702C4 /* ProductContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685187205D750C006702C4 /* ProductContract.swift */; };
+		CC68518A205D7866006702C4 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685189205D7866006702C4 /* ControllerType.swift */; };
+		CC68518D205D85DB006702C4 /* BaseOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68518C205D85DB006702C4 /* BaseOverlayController.swift */; };
+		CC685192205D8C5B006702C4 /* OrderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC685191205D8C5B006702C4 /* OrderView.storyboard */; };
+		CC685194205D8C8F006702C4 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685193205D8C8F006702C4 /* OrderController.swift */; };
+		CC685197205D8CAB006702C4 /* OrderRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685196205D8CAB006702C4 /* OrderRequestModel.swift */; };
+		CC685199205D8D67006702C4 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685198205D8D67006702C4 /* OrderItem.swift */; };
+		CC68519B205D8F3F006702C4 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68519A205D8F3F006702C4 /* OrderCell.swift */; };
+		CC68519D205D90C2006702C4 /* OrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68519C205D90C2006702C4 /* OrderPresenter.swift */; };
+		CC68519F205D90E4006702C4 /* OrderContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68519E205D90E4006702C4 /* OrderContract.swift */; };
+		CC6851A1205D9180006702C4 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6851A0205D9180006702C4 /* Variables.swift */; };
+		CC6851A3205D9715006702C4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6851A2205D9715006702C4 /* Util.swift */; };
+		CC812690205D9BB200EF4087 /* OrderResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC81268F205D9BB200EF4087 /* OrderResponseModel.swift */; };
+		CC812692205DA12B00EF4087 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC812691205DA12B00EF4087 /* Date+Extension.swift */; };
 		CCB406EB205BFE1500E5E4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB406EA205BFE1500E5E4EC /* AppDelegate.swift */; };
-		CCB406ED205BFE1500E5E4EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB406EC205BFE1500E5E4EC /* ViewController.swift */; };
-		CCB406F0205BFE1500E5E4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB406EE205BFE1500E5E4EC /* Main.storyboard */; };
 		CCB406F3205BFE1500E5E4EC /* Hackaton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCB406F1205BFE1500E5E4EC /* Hackaton.xcdatamodeld */; };
 		CCB406F5205BFE1500E5E4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB406F4205BFE1500E5E4EC /* Assets.xcassets */; };
 		CCB406F8205BFE1500E5E4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB406F6205BFE1500E5E4EC /* LaunchScreen.storyboard */; };
 		CCB40703205BFE1500E5E4EC /* HackatonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB40702205BFE1500E5E4EC /* HackatonTests.swift */; };
 		CCB4070E205BFE1500E5E4EC /* HackatonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB4070D205BFE1500E5E4EC /* HackatonUITests.swift */; };
+		CCC563AC205DA5B000E08818 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563AB205DA5B000E08818 /* Double+Extension.swift */; };
+		CCC563AE205DAA0800E08818 /* AddressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC563AD205DAA0800E08818 /* AddressView.storyboard */; };
+		CCC563B0205DAA2E00E08818 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563AF205DAA2E00E08818 /* AddressController.swift */; };
+		CCC563B2205DAA9E00E08818 /* AddressContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563B1205DAA9E00E08818 /* AddressContract.swift */; };
+		CCC563B4205DAAD900E08818 /* AddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563B3205DAAD900E08818 /* AddressPresenter.swift */; };
+		CCC563B7205DB1F800E08818 /* StoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563B6205DB1F800E08818 /* StoreController.swift */; };
+		CCC563B9205DB21200E08818 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563B8205DB21200E08818 /* StoreItem.swift */; };
+		CCC563BB205DB28E00E08818 /* StoreContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563BA205DB28E00E08818 /* StoreContract.swift */; };
+		CCC563BD205DB2A200E08818 /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563BC205DB2A200E08818 /* StorePresenter.swift */; };
+		CCC563BF205DB3CD00E08818 /* StoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC563BE205DB3CD00E08818 /* StoreView.storyboard */; };
+		CCC563C1205DB42400E08818 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563C0205DB42400E08818 /* StoreCell.swift */; };
+		CCC563C7205DB7D200E08818 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563C6205DB7D200E08818 /* LoginAPI.swift */; };
+		CCC563CA205DBE9300E08818 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563C9205DBE9300E08818 /* CreateAccountController.swift */; };
+		CCC563CC205DBEA200E08818 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563CB205DBEA200E08818 /* CreateAccountPresenter.swift */; };
+		CCC563CE205DBEB100E08818 /* CreateAccountContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563CD205DBEB100E08818 /* CreateAccountContract.swift */; };
+		CCC563D0205DBF2C00E08818 /* AccountRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563CF205DBF2C00E08818 /* AccountRequestModel.swift */; };
+		CCC563D2205DC13E00E08818 /* CreateAccountView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */; };
+		CCD5EAE7205DC89B00022D8C /* CheckUserLoggedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5EAE6205DC89B00022D8C /* CheckUserLoggedService.swift */; };
+		CCD5EAE9205DD75600022D8C /* StoreOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5EAE8205DD75600022D8C /* StoreOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +91,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AAD60911A38FE3AB90E194E /* Pods-HackatonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonTests/Pods-HackatonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		635182702C9B6B59CAF9BAF2 /* Pods-HackatonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonUITests/Pods-HackatonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6579D0145C81BBD1CB08911A /* Pods-Hackaton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.release.xcconfig"; sourceTree = "<group>"; };
+		99011380F37781FAE8A3BA8F /* Pods_HackatonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99D1620188184FA220005DA /* Pods-HackatonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonTests/Pods-HackatonTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7C53589A279B96CF2B5C447 /* Pods-HackatonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonUITests/Pods-HackatonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC685147205D4C35006702C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CC68514A205D4C49006702C4 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		CC68514E205D4F03006702C4 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		CC685150205D4F10006702C4 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		CC685152205D4F44006702C4 /* BaseGenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGenericTableViewController.swift; sourceTree = "<group>"; };
+		CC685155205D50F9006702C4 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CC685157205D5152006702C4 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		CC685159205D51E5006702C4 /* BasePresenterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterContract.swift; sourceTree = "<group>"; };
+		CC68515B205D51F9006702C4 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		CC68515D205D5337006702C4 /* HackathonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonAPI.swift; sourceTree = "<group>"; };
+		CC685160205D54DC006702C4 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		CC685163205D562F006702C4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CC685166205D5703006702C4 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		CC68516A205D5A53006702C4 /* HackathonRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonRequestProtocol.swift; sourceTree = "<group>"; };
+		CC68516D205D5E13006702C4 /* HackathonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonError.swift; sourceTree = "<group>"; };
+		CC685170205D6563006702C4 /* UnauthenticateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthenticateAPI.swift; sourceTree = "<group>"; };
+		CC685174205D6EB9006702C4 /* ProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductController.swift; sourceTree = "<group>"; };
+		CC68517B205D6EF1006702C4 /* ProductResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseModel.swift; sourceTree = "<group>"; };
+		CC68517E205D6F54006702C4 /* AuthenticateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateAPI.swift; sourceTree = "<group>"; };
+		CC685180205D7047006702C4 /* ProductView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductView.storyboard; sourceTree = "<group>"; };
+		CC685183205D724E006702C4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		CC685185205D749D006702C4 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
+		CC685187205D750C006702C4 /* ProductContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContract.swift; sourceTree = "<group>"; };
+		CC685189205D7866006702C4 /* ControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
+		CC68518C205D85DB006702C4 /* BaseOverlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOverlayController.swift; sourceTree = "<group>"; };
+		CC685191205D8C5B006702C4 /* OrderView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderView.storyboard; sourceTree = "<group>"; };
+		CC685193205D8C8F006702C4 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		CC685196205D8CAB006702C4 /* OrderRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequestModel.swift; sourceTree = "<group>"; };
+		CC685198205D8D67006702C4 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		CC68519A205D8F3F006702C4 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		CC68519C205D90C2006702C4 /* OrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPresenter.swift; sourceTree = "<group>"; };
+		CC68519E205D90E4006702C4 /* OrderContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContract.swift; sourceTree = "<group>"; };
+		CC6851A0205D9180006702C4 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		CC6851A2205D9715006702C4 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		CC81268F205D9BB200EF4087 /* OrderResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponseModel.swift; sourceTree = "<group>"; };
+		CC812691205DA12B00EF4087 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		CCB406E7205BFE1500E5E4EC /* Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB406EA205BFE1500E5E4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCB406EC205BFE1500E5E4EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCB406EF205BFE1500E5E4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCB406F2205BFE1500E5E4EC /* Hackaton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hackaton.xcdatamodel; sourceTree = "<group>"; };
 		CCB406F4205BFE1500E5E4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCB406F7205BFE1500E5E4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +145,28 @@
 		CCB40709205BFE1500E5E4EC /* HackatonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackatonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB4070D205BFE1500E5E4EC /* HackatonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackatonUITests.swift; sourceTree = "<group>"; };
 		CCB4070F205BFE1500E5E4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC563AB205DA5B000E08818 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		CCC563AD205DAA0800E08818 /* AddressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddressView.storyboard; sourceTree = "<group>"; };
+		CCC563AF205DAA2E00E08818 /* AddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
+		CCC563B1205DAA9E00E08818 /* AddressContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressContract.swift; sourceTree = "<group>"; };
+		CCC563B3205DAAD900E08818 /* AddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPresenter.swift; sourceTree = "<group>"; };
+		CCC563B6205DB1F800E08818 /* StoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreController.swift; sourceTree = "<group>"; };
+		CCC563B8205DB21200E08818 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		CCC563BA205DB28E00E08818 /* StoreContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreContract.swift; sourceTree = "<group>"; };
+		CCC563BC205DB2A200E08818 /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
+		CCC563BE205DB3CD00E08818 /* StoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreView.storyboard; sourceTree = "<group>"; };
+		CCC563C0205DB42400E08818 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		CCC563C6205DB7D200E08818 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		CCC563C9205DBE9300E08818 /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
+		CCC563CB205DBEA200E08818 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
+		CCC563CD205DBEB100E08818 /* CreateAccountContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountContract.swift; sourceTree = "<group>"; };
+		CCC563CF205DBF2C00E08818 /* AccountRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequestModel.swift; sourceTree = "<group>"; };
+		CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountView.storyboard; sourceTree = "<group>"; };
+		CCD5EAE6205DC89B00022D8C /* CheckUserLoggedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedService.swift; sourceTree = "<group>"; };
+		CCD5EAE8205DD75600022D8C /* StoreOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOrder.swift; sourceTree = "<group>"; };
+		D83C6417D7219212F72555DD /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
+		D9A00707E4A24B93B3A6A5A6 /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7F2152C6DF638165C922C0 /* Pods_HackatonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE005B698E1D9A1B2DA77F4 /* Pods_Hackaton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1796DDEDC0712908663F9EC1 /* Pods_HackatonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +190,248 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8B3D13B6E5F9944678F6B2 /* Pods_HackatonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EB7229A8FD5C6B86BD44FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9A00707E4A24B93B3A6A5A6 /* Pods_Hackaton.framework */,
+				EB7F2152C6DF638165C922C0 /* Pods_HackatonTests.framework */,
+				99011380F37781FAE8A3BA8F /* Pods_HackatonUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51A27AB21BB00F1196081704 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D83C6417D7219212F72555DD /* Pods-Hackaton.debug.xcconfig */,
+				6579D0145C81BBD1CB08911A /* Pods-Hackaton.release.xcconfig */,
+				0AAD60911A38FE3AB90E194E /* Pods-HackatonTests.debug.xcconfig */,
+				A99D1620188184FA220005DA /* Pods-HackatonTests.release.xcconfig */,
+				C7C53589A279B96CF2B5C447 /* Pods-HackatonUITests.debug.xcconfig */,
+				635182702C9B6B59CAF9BAF2 /* Pods-HackatonUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC685143205D4C09006702C4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C8205DBDEB00E08818 /* Account */,
+				CCC563B5205DB1EB00E08818 /* Store */,
+				CC68518B205D85BC006702C4 /* Order */,
+				CC685173205D6EA8006702C4 /* Product */,
+				CC685172205D6E68006702C4 /* CreateAccount */,
+				CC685144205D4C18006702C4 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CC685144205D4C18006702C4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C5205DB7C500E08818 /* Api */,
+				CC68515F205D54CC006702C4 /* Model */,
+				CC685154205D50F0006702C4 /* Presenter */,
+				CC685149205D4C3D006702C4 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CC685149205D4C3D006702C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC685147205D4C35006702C4 /* LoginController.swift */,
+				CC68514A205D4C49006702C4 /* LoginView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC68514C205D4ED5006702C4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CC68517D205D6F2B006702C4 /* Service */,
+				CC685165205D56FB006702C4 /* Config */,
+				CC68514D205D4EE0006702C4 /* Base */,
+				CC685162205D561D006702C4 /* Extension */,
+				CC6851A2205D9715006702C4 /* Util.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CC68514D205D4EE0006702C4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CC68516F205D62B2006702C4 /* Contracts */,
+				CC68516C205D5DFB006702C4 /* Api */,
+				CC68514E205D4F03006702C4 /* BaseController.swift */,
+				CC685150205D4F10006702C4 /* BaseTableViewController.swift */,
+				CC685152205D4F44006702C4 /* BaseGenericTableViewController.swift */,
+				CC68515B205D51F9006702C4 /* BasePresenter.swift */,
+				CC68518C205D85DB006702C4 /* BaseOverlayController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CC685154205D50F0006702C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC685155205D50F9006702C4 /* LoginPresenter.swift */,
+				CC685157205D5152006702C4 /* LoginContract.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC68515F205D54CC006702C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC685160205D54DC006702C4 /* LoginRequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC685162205D561D006702C4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC685163205D562F006702C4 /* UIViewController+Extension.swift */,
+				CC812691205DA12B00EF4087 /* Date+Extension.swift */,
+				CCC563AB205DA5B000E08818 /* Double+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CC685165205D56FB006702C4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CC685166205D5703006702C4 /* AppConfig.swift */,
+				CC685189205D7866006702C4 /* ControllerType.swift */,
+				CC6851A0205D9180006702C4 /* Variables.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CC68516C205D5DFB006702C4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CC68516A205D5A53006702C4 /* HackathonRequestProtocol.swift */,
+				CC68515D205D5337006702C4 /* HackathonAPI.swift */,
+				CC68516D205D5E13006702C4 /* HackathonError.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CC68516F205D62B2006702C4 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				CC685159205D51E5006702C4 /* BasePresenterContract.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		CC685172205D6E68006702C4 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		CC685173205D6EA8006702C4 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				CC685178205D6ECD006702C4 /* Model */,
+				CC685177205D6EC5006702C4 /* Presenter */,
+				CC685176205D6EBF006702C4 /* View */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		CC685176205D6EBF006702C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC685174205D6EB9006702C4 /* ProductController.swift */,
+				CC685180205D7047006702C4 /* ProductView.storyboard */,
+				CC685183205D724E006702C4 /* ProductCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC685177205D6EC5006702C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC685185205D749D006702C4 /* ProductPresenter.swift */,
+				CC685187205D750C006702C4 /* ProductContract.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC685178205D6ECD006702C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC68517B205D6EF1006702C4 /* ProductResponseModel.swift */,
+				CCD5EAE8205DD75600022D8C /* StoreOrder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC68517D205D6F2B006702C4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CC685170205D6563006702C4 /* UnauthenticateAPI.swift */,
+				CC68517E205D6F54006702C4 /* AuthenticateAPI.swift */,
+				CCD5EAE6205DC89B00022D8C /* CheckUserLoggedService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CC68518B205D85BC006702C4 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				CC685190205D8C4A006702C4 /* Presenter */,
+				CC68518F205D8C3E006702C4 /* Model */,
+				CC68518E205D8C39006702C4 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		CC68518E205D8C39006702C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC685191205D8C5B006702C4 /* OrderView.storyboard */,
+				CC685193205D8C8F006702C4 /* OrderController.swift */,
+				CC68519A205D8F3F006702C4 /* OrderCell.swift */,
+				CCC563AD205DAA0800E08818 /* AddressView.storyboard */,
+				CCC563AF205DAA2E00E08818 /* AddressController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC68518F205D8C3E006702C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC685196205D8CAB006702C4 /* OrderRequestModel.swift */,
+				CC685198205D8D67006702C4 /* OrderItem.swift */,
+				CC81268F205D9BB200EF4087 /* OrderResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC685190205D8C4A006702C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC68519C205D90C2006702C4 /* OrderPresenter.swift */,
+				CC68519E205D90E4006702C4 /* OrderContract.swift */,
+				CCC563B1205DAA9E00E08818 /* AddressContract.swift */,
+				CCC563B3205DAAD900E08818 /* AddressPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CCB406DE205BFE1500E5E4EC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +439,8 @@
 				CCB40701205BFE1500E5E4EC /* HackatonTests */,
 				CCB4070C205BFE1500E5E4EC /* HackatonUITests */,
 				CCB406E8205BFE1500E5E4EC /* Products */,
+				51A27AB21BB00F1196081704 /* Pods */,
+				3EB7229A8FD5C6B86BD44FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +457,9 @@
 		CCB406E9205BFE1500E5E4EC /* Hackaton */ = {
 			isa = PBXGroup;
 			children = (
+				CC68514C205D4ED5006702C4 /* Shared */,
+				CC685143205D4C09006702C4 /* Features */,
 				CCB406EA205BFE1500E5E4EC /* AppDelegate.swift */,
-				CCB406EC205BFE1500E5E4EC /* ViewController.swift */,
-				CCB406EE205BFE1500E5E4EC /* Main.storyboard */,
 				CCB406F4205BFE1500E5E4EC /* Assets.xcassets */,
 				CCB406F6205BFE1500E5E4EC /* LaunchScreen.storyboard */,
 				CCB406F9205BFE1500E5E4EC /* Info.plist */,
@@ -128,6 +486,63 @@
 			path = HackatonUITests;
 			sourceTree = "<group>";
 		};
+		CCC563B5205DB1EB00E08818 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C2205DB78800E08818 /* View */,
+				CCC563C4205DB7A000E08818 /* Model */,
+				CCC563C3205DB79600E08818 /* Presenter */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		CCC563C2205DB78800E08818 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563B6205DB1F800E08818 /* StoreController.swift */,
+				CCC563BE205DB3CD00E08818 /* StoreView.storyboard */,
+				CCC563C0205DB42400E08818 /* StoreCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCC563C3205DB79600E08818 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563BA205DB28E00E08818 /* StoreContract.swift */,
+				CCC563BC205DB2A200E08818 /* StorePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CCC563C4205DB7A000E08818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563B8205DB21200E08818 /* StoreItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCC563C5205DB7C500E08818 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C6205DB7D200E08818 /* LoginAPI.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CCC563C8205DBDEB00E08818 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C9205DBE9300E08818 /* CreateAccountController.swift */,
+				CCC563CB205DBEA200E08818 /* CreateAccountPresenter.swift */,
+				CCC563CD205DBEB100E08818 /* CreateAccountContract.swift */,
+				CCC563CF205DBF2C00E08818 /* AccountRequestModel.swift */,
+				CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +550,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCB40712205BFE1500E5E4EC /* Build configuration list for PBXNativeTarget "Hackaton" */;
 			buildPhases = (
+				CC4AF02EAADBE80164552292 /* [CP] Check Pods Manifest.lock */,
 				CCB406E3205BFE1500E5E4EC /* Sources */,
 				CCB406E4205BFE1500E5E4EC /* Frameworks */,
 				CCB406E5205BFE1500E5E4EC /* Resources */,
+				87556BFF5BD019FFF8C0904D /* [CP] Embed Pods Frameworks */,
+				47706109E4304F167B14B614 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +570,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCB40715205BFE1500E5E4EC /* Build configuration list for PBXNativeTarget "HackatonTests" */;
 			buildPhases = (
+				BFABAD8CD2B09D33396BC4CE /* [CP] Check Pods Manifest.lock */,
 				CCB406FA205BFE1500E5E4EC /* Sources */,
 				CCB406FB205BFE1500E5E4EC /* Frameworks */,
 				CCB406FC205BFE1500E5E4EC /* Resources */,
+				8CA72CBF26665A06879DA65D /* [CP] Embed Pods Frameworks */,
+				D4E6984CF733B0D27A3B7870 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +591,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCB40718205BFE1500E5E4EC /* Build configuration list for PBXNativeTarget "HackatonUITests" */;
 			buildPhases = (
+				345B62CD479FE60C67367707 /* [CP] Check Pods Manifest.lock */,
 				CCB40705205BFE1500E5E4EC /* Sources */,
 				CCB40706205BFE1500E5E4EC /* Frameworks */,
 				CCB40707205BFE1500E5E4EC /* Resources */,
+				A157ACE1D37963006458EC86 /* [CP] Embed Pods Frameworks */,
+				89217738CC4F10A7A7DBC1CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,8 +660,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB406F8205BFE1500E5E4EC /* LaunchScreen.storyboard in Resources */,
+				CC685181205D7047006702C4 /* ProductView.storyboard in Resources */,
 				CCB406F5205BFE1500E5E4EC /* Assets.xcassets in Resources */,
-				CCB406F0205BFE1500E5E4EC /* Main.storyboard in Resources */,
+				CC685192205D8C5B006702C4 /* OrderView.storyboard in Resources */,
+				CCC563AE205DAA0800E08818 /* AddressView.storyboard in Resources */,
+				CC68514B205D4C49006702C4 /* LoginView.storyboard in Resources */,
+				CCC563BF205DB3CD00E08818 /* StoreView.storyboard in Resources */,
+				CCC563D2205DC13E00E08818 /* CreateAccountView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +686,226 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		345B62CD479FE60C67367707 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackatonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47706109E4304F167B14B614 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87556BFF5BD019FFF8C0904D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89217738CC4F10A7A7DBC1CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackatonUITests/Pods-HackatonUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA72CBF26665A06879DA65D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackatonTests/Pods-HackatonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A157ACE1D37963006458EC86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackatonUITests/Pods-HackatonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFABAD8CD2B09D33396BC4CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackatonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC4AF02EAADBE80164552292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hackaton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4E6984CF733B0D27A3B7870 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackatonTests/Pods-HackatonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCB406E3205BFE1500E5E4EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB406ED205BFE1500E5E4EC /* ViewController.swift in Sources */,
+				CC685156205D50F9006702C4 /* LoginPresenter.swift in Sources */,
+				CC812690205D9BB200EF4087 /* OrderResponseModel.swift in Sources */,
+				CC685161205D54DC006702C4 /* LoginRequestModel.swift in Sources */,
+				CCC563BB205DB28E00E08818 /* StoreContract.swift in Sources */,
+				CC685188205D750C006702C4 /* ProductContract.swift in Sources */,
+				CCC563CE205DBEB100E08818 /* CreateAccountContract.swift in Sources */,
+				CC6851A1205D9180006702C4 /* Variables.swift in Sources */,
+				CCC563D0205DBF2C00E08818 /* AccountRequestModel.swift in Sources */,
+				CC685186205D749D006702C4 /* ProductPresenter.swift in Sources */,
+				CCD5EAE7205DC89B00022D8C /* CheckUserLoggedService.swift in Sources */,
+				CC68515A205D51E5006702C4 /* BasePresenterContract.swift in Sources */,
+				CC68515C205D51F9006702C4 /* BasePresenter.swift in Sources */,
+				CCC563CA205DBE9300E08818 /* CreateAccountController.swift in Sources */,
+				CCC563B4205DAAD900E08818 /* AddressPresenter.swift in Sources */,
+				CCC563B7205DB1F800E08818 /* StoreController.swift in Sources */,
+				CC68519B205D8F3F006702C4 /* OrderCell.swift in Sources */,
+				CC685171205D6563006702C4 /* UnauthenticateAPI.swift in Sources */,
+				CC685197205D8CAB006702C4 /* OrderRequestModel.swift in Sources */,
+				CC685164205D562F006702C4 /* UIViewController+Extension.swift in Sources */,
+				CCC563B9205DB21200E08818 /* StoreItem.swift in Sources */,
+				CC68519F205D90E4006702C4 /* OrderContract.swift in Sources */,
+				CCC563BD205DB2A200E08818 /* StorePresenter.swift in Sources */,
+				CC685151205D4F10006702C4 /* BaseTableViewController.swift in Sources */,
+				CC68516B205D5A53006702C4 /* HackathonRequestProtocol.swift in Sources */,
+				CC68517C205D6EF1006702C4 /* ProductResponseModel.swift in Sources */,
+				CCC563B2205DAA9E00E08818 /* AddressContract.swift in Sources */,
+				CCC563C7205DB7D200E08818 /* LoginAPI.swift in Sources */,
+				CC685167205D5703006702C4 /* AppConfig.swift in Sources */,
+				CC68518A205D7866006702C4 /* ControllerType.swift in Sources */,
+				CC68516E205D5E13006702C4 /* HackathonError.swift in Sources */,
+				CC685153205D4F44006702C4 /* BaseGenericTableViewController.swift in Sources */,
+				CCC563AC205DA5B000E08818 /* Double+Extension.swift in Sources */,
+				CC685158205D5152006702C4 /* LoginContract.swift in Sources */,
+				CCC563B0205DAA2E00E08818 /* AddressController.swift in Sources */,
+				CC685148205D4C35006702C4 /* LoginController.swift in Sources */,
+				CC685175205D6EB9006702C4 /* ProductController.swift in Sources */,
+				CC6851A3205D9715006702C4 /* Util.swift in Sources */,
+				CCC563CC205DBEA200E08818 /* CreateAccountPresenter.swift in Sources */,
+				CCD5EAE9205DD75600022D8C /* StoreOrder.swift in Sources */,
+				CC68514F205D4F03006702C4 /* BaseController.swift in Sources */,
+				CC812692205DA12B00EF4087 /* Date+Extension.swift in Sources */,
+				CC685199205D8D67006702C4 /* OrderItem.swift in Sources */,
+				CC68515E205D5337006702C4 /* HackathonAPI.swift in Sources */,
+				CC685194205D8C8F006702C4 /* OrderController.swift in Sources */,
+				CC68518D205D85DB006702C4 /* BaseOverlayController.swift in Sources */,
+				CC68517F205D6F54006702C4 /* AuthenticateAPI.swift in Sources */,
+				CCC563C1205DB42400E08818 /* StoreCell.swift in Sources */,
+				CC685184205D724E006702C4 /* ProductCell.swift in Sources */,
 				CCB406EB205BFE1500E5E4EC /* AppDelegate.swift in Sources */,
 				CCB406F3205BFE1500E5E4EC /* Hackaton.xcdatamodeld in Sources */,
+				CC68519D205D90C2006702C4 /* OrderPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +941,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CCB406EE205BFE1500E5E4EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCB406EF205BFE1500E5E4EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCB406F6205BFE1500E5E4EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,6 +1061,7 @@
 		};
 		CCB40713205BFE1500E5E4EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D83C6417D7219212F72555DD /* Pods-Hackaton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +1076,7 @@
 		};
 		CCB40714205BFE1500E5E4EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6579D0145C81BBD1CB08911A /* Pods-Hackaton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +1091,7 @@
 		};
 		CCB40716205BFE1500E5E4EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AAD60911A38FE3AB90E194E /* Pods-HackatonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +1108,7 @@
 		};
 		CCB40717205BFE1500E5E4EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A99D1620188184FA220005DA /* Pods-HackatonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +1125,7 @@
 		};
 		CCB40719205BFE1500E5E4EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C53589A279B96CF2B5C447 /* Pods-HackatonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +1141,7 @@
 		};
 		CCB4071A205BFE1500E5E4EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 635182702C9B6B59CAF9BAF2 /* Pods-HackatonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
