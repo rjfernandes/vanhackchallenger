@@ -13,4 +13,5 @@ enum ControllerType: String {
     case stores = "StoreView"
     case products = "ProductView"
     case orders = "OrderView"
+    case address = "AddressView"
 }

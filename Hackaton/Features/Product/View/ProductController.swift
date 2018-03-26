@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import Motion
 
 class ProductController: BaseGenericTableViewController<ProductResponseModel>, OverlayProtocol {
     
@@ -15,6 +16,9 @@ class ProductController: BaseGenericTableViewController<ProductResponseModel>, O
     @IBOutlet var cartView: UIView!
     @IBOutlet var amountProductsLabel: UILabel!
     @IBOutlet var totalCart: UILabel!
+    @IBOutlet var createOrderButton: UIButton!
+    
+    private let boxHeight: CGFloat = isIphoneX() ? 64 : 44
     
     var store: StoreItem!
     
@@ -29,6 +33,7 @@ class ProductController: BaseGenericTableViewController<ProductResponseModel>, O
         super.viewDidLoad()
         presenter.set(store: store)
         presenter.request()
+        createOrderButton.layer.cornerRadius = 8
         btnOrders = UIBarButtonItem(title: "Orders", style: .plain, target: self, action: #selector(gotoOrdersTap))
         overlayController?.navigationItem.rightBarButtonItem = btnOrders
     }
@@ -66,12 +71,12 @@ class ProductController: BaseGenericTableViewController<ProductResponseModel>, O
                 .view.layout(cartView)
                 .height(isIphoneX() ? 64 : 44 )
                 .horizontally()
-                .bottom()
+                .bottom(boxHeight * -1.0)
         }
         
         amountProductsLabel.text = "\(cart.count) product(s) on cart"
         totalCart.text = cart.map({ $0.price }).reduce(0.0, +).currency
-        cartView.isHidden = cart.isEmpty
+        cartView.animate([ .translate(x: 0, y: boxHeight * (cart.isEmpty ? 1 : -1), z: 0) ])
     }
 
     @IBAction func placeOrderTap() {
@@ -86,11 +91,7 @@ extension ProductController: ProductViewContract {
             self.overlayController?.navigationController?.popViewController(animated: true)
         }
     }
-    
-    func showLoading() { }
-    
-    func hideLoading() { }
-    
+
     func show(error: String) {
         alert(message: error)
     }

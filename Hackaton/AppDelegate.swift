@@ -14,15 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         profile = CheckUserLoggedService().profile()
         
+        application.statusBarStyle = .lightContent
+        
         if let controller = UIStoryboard(name: "LoginView", bundle: nil).instantiateInitialViewController() {
             window = UIWindow(frame: UIScreen.main.bounds)
-            let navController = UINavigationController(rootViewController: controller)
+            let navController = HackatonNavigationController(rootViewController: controller)
             window?.rootViewController = navController
             window?.makeKeyAndVisible()
         }

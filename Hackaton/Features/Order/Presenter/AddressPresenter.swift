@@ -10,10 +10,13 @@ import Foundation
 
 class AddressPresenter: BasePresenter<AddressViewContract>, AddressPresenterContract {
     
-    private var orders = [OrderItem]()
+    lazy var orderAPI = OrderAPI()
     
-    func set(pickedOrders: [OrderItem]) {
-        orders += pickedOrders
+    private var ordersToPlace = [StoreOrder]()
+    
+    func set(pickedOrders: [StoreOrder]) {
+        ordersToPlace += pickedOrders
+        view.set(contactName: profile?.name)
     }
     
     func placeOrders(contactName: String?, deliveryAddress: String?) {
@@ -22,24 +25,17 @@ class AddressPresenter: BasePresenter<AddressViewContract>, AddressPresenterCont
             return
         }
         
-        let total = orders.map({ $0.price }).reduce(0.0, +)
+        orderAPI.contact = contactName
+        orderAPI.address = deliveryAddress
         
-        let lastDate = Date().w3c
-        
-        let placeOrder = OrderRequestModel(id: 0, date: lastDate, customerId: 0, deliveryAddress: deliveryAddress, contact: contactName, storeId: 0, orderItems: orders, total: total, status: "", lastUpdate: lastDate)
-        
-        authAPI.request(placeOrder, method: .post) { (result: String?, error) in
+        orderAPI.placeOrders(items: ordersToPlace) { (_, error) in
             if let error = error?.localizedDescription {
                 self.view.show(error: error)
             }
             else {
+                orders.removeAll()
                 self.view.success()
             }
         }
     }
-    
-    
-    
-    
-    
 }

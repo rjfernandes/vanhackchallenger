@@ -9,5 +9,8 @@
 import UIKit
 
 class BaseController: UIViewController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addBackButton()
+    }
 }

@@ -19,5 +19,15 @@ struct OrderItem: Encodable, Equatable {
     let price: Double
     let quantity: Int64
     let total: Double
-    let product: [ProductResponseModel]
+    let product: ProductResponseModel
+    
+    init(product: ProductResponseModel, quantity: Int64 = 1) {
+        self.product = product
+        id = 0
+        orderId = 0
+        productId = product.id
+        price = product.price
+        self.quantity = quantity
+        total = price * Double(quantity)
+    }
 }

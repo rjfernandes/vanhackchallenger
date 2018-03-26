@@ -11,7 +11,7 @@ import Foundation
 protocol OrderViewContract: BaseViewContract {
     func populate(items: [StoreOrder])
     func success()
-    func requestAddress()
+    func requestAddress(orders: [StoreOrder])
 }
 
 protocol OrderPresenterContract: BasePresenterContract {

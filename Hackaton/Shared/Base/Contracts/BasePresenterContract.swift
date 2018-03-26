@@ -9,8 +9,6 @@
 import Foundation
 
 protocol BaseViewContract {
-    func showLoading()
-    func hideLoading()
     func show(error: String)
 }
 

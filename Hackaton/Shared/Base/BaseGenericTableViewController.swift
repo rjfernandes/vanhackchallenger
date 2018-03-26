@@ -10,6 +10,13 @@ import UIKit
 
 class BaseGenericTableViewController<T>: BaseTableViewController {
     
+    var isDisableReloadDataForNow = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+    }
+    
     private var _filter: ((T) -> Bool)?
     
     var items = [T]() {
@@ -36,6 +43,12 @@ class BaseGenericTableViewController<T>: BaseTableViewController {
         else {
             filteredItems += items
         }
+
+        if isDisableReloadDataForNow {
+            isDisableReloadDataForNow = false
+            return
+        }
+        
         tableView.reloadData()
     }
     

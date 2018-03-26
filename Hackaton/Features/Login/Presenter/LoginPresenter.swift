@@ -12,17 +12,6 @@ class LoginPresenter: BasePresenter<LoginViewContract>, LoginContractPresenter {
     
     lazy var loginAPI = LoginAPI()
     
-    override func start() {
-        loginAPI.requestingObserver.subscribe(onNext: { value in
-            if value {
-                self.view.showLoading()
-            }
-            else {
-                self.view.hideLoading()
-            }
-        }).disposed(by: disposeBag)
-    }
-    
     func login(email: String?, password: String?) {
         guard let email = email?.trimmingCharacters(in: .whitespacesAndNewlines), let password = password?.trimmingCharacters(in: .whitespacesAndNewlines), email.count > 0 && password.count > 0 else {
             view.show(error: "You must provide an email and password")

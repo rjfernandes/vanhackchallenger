@@ -9,10 +9,11 @@
 import Foundation
 
 protocol AddressViewContract: BaseViewContract {
+    func set(contactName: String?)
     func success()
 }
 
 protocol AddressPresenterContract: BasePresenterContract {
-    func set(pickedOrders: [OrderItem])
+    func set(pickedOrders: [StoreOrder])
     func placeOrders(contactName: String?, deliveryAddress: String?)
 }

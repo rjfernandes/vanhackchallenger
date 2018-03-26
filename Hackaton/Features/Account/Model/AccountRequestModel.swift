@@ -15,8 +15,8 @@ struct AccountRequestModel: HackathonRequestProtocol, Decodable {
 
     let id: Int64
     let email: String
-    let name: String
-    let address: String
+    var name: String
+    var address: String
     let creation: String
     let password: String
 }

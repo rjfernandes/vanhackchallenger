@@ -83,6 +83,7 @@
                     <connections>
                         <outlet property="amountProductsLabel" destination="aMc-Qb-WzD" id="MiE-Wx-tBj"/>
                         <outlet property="cartView" destination="mP5-6r-rDp" id="Pgu-Wx-3dN"/>
+                        <outlet property="createOrderButton" destination="pl0-iD-gi7" id="3kn-bX-U1i"/>
                         <outlet property="totalCart" destination="qkW-ef-6vn" id="meV-2y-fsL"/>
                     </connections>
                 </tableViewController>

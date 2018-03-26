@@ -10,16 +10,21 @@ import UIKit
 
 class LoginController: BaseTableViewController {
     
+    // Outlets
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     // Presenter
     lazy var presenter = LoginPresenter(view: self)
     lazy var checkUserLoggedService = CheckUserLoggedService()
-    
-    // Outlets
-    @IBOutlet weak var emailTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
+    lazy var loadingManager = LoadingManager(at: loginButton)
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        loadingManager.set(observer: presenter.loginAPI.requestingObserver)
+        [emailTextField, passwordTextField].forEach { $0?.setPaddingLeft() }
         if checkUserLoggedService.isLogged() {
             granteed()
         }
@@ -28,7 +33,8 @@ class LoginController: BaseTableViewController {
     // Actions
     
     @IBAction func loginTap() {
-        presenter.login(email: emailTextView.text, password: passwordTextView.text)
+        view.endEditing(true)
+        presenter.login(email: emailTextField.text, password: passwordTextField.text)
     }
     
     @IBAction func createAccountTap() {
@@ -37,21 +43,14 @@ class LoginController: BaseTableViewController {
 }
 
 extension LoginController: LoginViewContract {
-    func showLoading() {
-        
-    }
-    
-    func hideLoading() {
-        
-    }
-    
     func show(error: String) {
         alert(message: error)
     }
     
     func granteed() {
         if let controller = create(controllerType: .stores) {
-            let navController = UINavigationController(rootViewController: controller)
+            let overlayController = OverlayController(rootViewController: controller)
+            let navController = HackatonNavigationController(rootViewController: overlayController)
             present(navController, animated: true, completion: nil)
         }
     }

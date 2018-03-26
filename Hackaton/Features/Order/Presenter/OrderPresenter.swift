@@ -10,6 +10,8 @@ import Foundation
 
 class OrderPresenter: BasePresenter<OrderViewContract>, OrderPresenterContract {
     
+    lazy var orderAPI = OrderAPI()
+    
     func request() {
         view.populate(items: orders)
     }
@@ -20,16 +22,14 @@ class OrderPresenter: BasePresenter<OrderViewContract>, OrderPresenterContract {
             return
         }
         
-        guard let store = items.first else { return }
+        guard profile?.name != nil else {
+            view.requestAddress(orders: items)
+            return
+        }
         
-        let orderItems = items.map({ $0.order })
-        let total = orderItems.map({ $0.price }).reduce(0.0, +)
-        
-        let orderRequest = OrderRequestModel(id: 0, date: Date().w3c, customerId: profile?.id ?? 0, deliveryAddress: profile?.address ?? "", contact: profile?.name ?? "", storeId: store.store.id, orderItems: orderItems, total: total, status: "", lastUpdate: Date().w3c)
-        
-        authAPI.request(orderRequest, method: .post) { (result: String?, error) in
-            if let error = error {
-                self.view.show(error: error.localizedDescription)
+        orderAPI.placeOrders(items: items) { (_, error) in
+            if let error = error?.localizedDescription {
+                self.view.show(error: error)
             }
             else {
                 orders.removeAll()

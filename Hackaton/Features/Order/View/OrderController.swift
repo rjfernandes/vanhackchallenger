@@ -13,7 +13,6 @@ class OrderController: BaseGenericTableViewController<StoreOrder> {
     var ordersPicked = [Int: StoreOrder]()
     
     lazy var presenter = OrderPresenter(view: self)
-    var storeId: Int64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class OrderController: BaseGenericTableViewController<StoreOrder> {
     }
     
     override func picked(item: StoreOrder, at indexPath: IndexPath) {
-        if storeId != 0 && storeId != item.store.id {
+        if !ordersPicked.isEmpty && ordersPicked.map({ _, value in value }).contains(where: { $0.store.id != item.store.id }) {
             alert(message: "You must to pick all orders from the same store")
             return
         }
@@ -52,22 +51,16 @@ class OrderController: BaseGenericTableViewController<StoreOrder> {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        isDisableReloadDataForNow = true
         orders.remove(at: indexPath.row)
         items.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
 
 extension OrderController: OrderViewContract {
     func populate(items: [StoreOrder]) {
         self.items += items
-    }
-    
-    func showLoading() {
-        
-    }
-    
-    func hideLoading() {
-        
     }
     
     func show(error: String) {
@@ -78,7 +71,9 @@ extension OrderController: OrderViewContract {
         alert(message: "Orders placed successfully")
     }
     
-    func requestAddress() {
-        
+    func requestAddress(orders: [StoreOrder]) {
+        push(controllerType: .address) { (controller: AddressController) in
+            controller.orders += orders
+        }
     }
 }

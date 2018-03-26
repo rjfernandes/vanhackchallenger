@@ -13,12 +13,32 @@
         <scene sceneID="7LD-Fg-by8">
             <objects>
                 <tableViewController title="Address" id="YEw-Wz-WeX" customClass="AddressController" customModule="Hackaton" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IhW-s1-0UN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IhW-s1-0UN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="czo-ts-WNQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, specify a contact name and address to delivery your meal:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R2-6q-hUJ">
+                                    <rect key="frame" x="25" y="27" width="325" height="92"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="0R2-6q-hUJ" firstAttribute="top" secondItem="czo-ts-WNQ" secondAttribute="top" constant="27" id="0Ax-BK-KSX"/>
+                                <constraint firstAttribute="bottom" secondItem="0R2-6q-hUJ" secondAttribute="bottom" constant="28" id="1Lg-2r-zV0"/>
+                                <constraint firstAttribute="trailing" secondItem="0R2-6q-hUJ" secondAttribute="trailing" constant="25" id="GK6-dZ-W8N"/>
+                                <constraint firstItem="0R2-6q-hUJ" firstAttribute="leading" secondItem="czo-ts-WNQ" secondAttribute="leading" constant="25" id="rmL-AF-jXe"/>
+                            </constraints>
+                        </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="dFO-2I-uYi">
-                            <rect key="frame" x="0.0" y="164" width="375" height="106"/>
+                            <rect key="frame" x="0.0" y="344" width="375" height="106"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvQ-Ff-Jh5">
@@ -34,50 +54,59 @@
                                         <action selector="placeOrdersTap" destination="YEw-Wz-WeX" eventType="touchUpInside" id="O9v-3m-DMh"/>
                                     </connections>
                                 </button>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="d6F-z1-UaL">
-                                    <rect key="frame" x="177" y="49" width="20" height="20"/>
-                                    <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="mvQ-Ff-Jh5" firstAttribute="leading" secondItem="dFO-2I-uYi" secondAttribute="leading" constant="16" id="Bzg-qg-AOp"/>
-                                <constraint firstItem="d6F-z1-UaL" firstAttribute="top" secondItem="dFO-2I-uYi" secondAttribute="top" constant="49" id="NXS-bG-FwF"/>
                                 <constraint firstItem="mvQ-Ff-Jh5" firstAttribute="top" secondItem="dFO-2I-uYi" secondAttribute="top" constant="40" id="R9U-ah-jWB"/>
-                                <constraint firstItem="d6F-z1-UaL" firstAttribute="centerX" secondItem="dFO-2I-uYi" secondAttribute="centerX" id="Unc-4j-btn"/>
                                 <constraint firstAttribute="trailing" secondItem="mvQ-Ff-Jh5" secondAttribute="trailing" constant="16" id="fSW-nV-97N"/>
                             </constraints>
                         </view>
                         <sections>
                             <tableViewSection id="BS8-fl-NBM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hJM-s0-M2e">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="hJM-s0-M2e">
+                                        <rect key="frame" x="0.0" y="147" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJM-s0-M2e" id="ptA-7g-lbF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZw-3v-j1p">
-                                                    <rect key="frame" x="16" y="6" width="343" height="31.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Place here your contact name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZw-3v-j1p">
+                                                    <rect key="frame" x="16" y="38" width="343" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31.5" id="vJa-Vf-esh"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-Zv-KvN">
+                                                    <rect key="frame" x="16" y="10" width="343" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="vsB-rG-1g8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DZw-3v-j1p" secondAttribute="trailing" constant="16" id="ZMt-Mp-gAg"/>
-                                                <constraint firstItem="DZw-3v-j1p" firstAttribute="top" secondItem="ptA-7g-lbF" secondAttribute="top" constant="6" id="bKT-TO-LgO"/>
-                                                <constraint firstAttribute="bottom" secondItem="DZw-3v-j1p" secondAttribute="bottom" constant="6" id="lMx-WT-Y4K"/>
-                                                <constraint firstItem="DZw-3v-j1p" firstAttribute="leading" secondItem="ptA-7g-lbF" secondAttribute="leading" constant="16" id="lWA-mA-G8y"/>
+                                                <constraint firstItem="d9c-Zv-KvN" firstAttribute="top" secondItem="ptA-7g-lbF" secondAttribute="top" constant="10" id="4jY-Hz-HiY"/>
+                                                <constraint firstAttribute="trailing" secondItem="DZw-3v-j1p" secondAttribute="trailing" constant="16" id="BIc-ig-TOG"/>
+                                                <constraint firstAttribute="bottom" secondItem="DZw-3v-j1p" secondAttribute="bottom" constant="7" id="JOH-wO-fWA"/>
+                                                <constraint firstItem="DZw-3v-j1p" firstAttribute="top" secondItem="d9c-Zv-KvN" secondAttribute="bottom" constant="7" id="cvo-YU-jbE"/>
+                                                <constraint firstItem="DZw-3v-j1p" firstAttribute="leading" secondItem="ptA-7g-lbF" secondAttribute="leading" constant="16" id="l4H-zn-dQN"/>
+                                                <constraint firstAttribute="trailing" secondItem="d9c-Zv-KvN" secondAttribute="trailing" constant="16" id="lrp-f0-xRE"/>
+                                                <constraint firstItem="d9c-Zv-KvN" firstAttribute="leading" secondItem="ptA-7g-lbF" secondAttribute="leading" constant="16" id="uo8-gz-6Va"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Tc0-B1-PzC">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="120"/>
+                                        <rect key="frame" x="0.0" y="224" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tc0-B1-PzC" id="8W8-L2-1Fh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-zQ-DGr">
@@ -122,7 +151,6 @@
                         <outlet property="contactNameTextField" destination="DZw-3v-j1p" id="hPH-zM-Lrl"/>
                         <outlet property="deliveryAddressTextView" destination="pjD-zQ-DGr" id="hXd-1i-Ud7"/>
                         <outlet property="placeOrdersButton" destination="mvQ-Ff-Jh5" id="XVz-JH-63u"/>
-                        <outlet property="requestingActivityIndicatorView" destination="d6F-z1-UaL" id="BvK-f7-eLS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lS-kU-kuE" userLabel="First Responder" sceneMemberID="firstResponder"/>

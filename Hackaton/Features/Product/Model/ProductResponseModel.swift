@@ -14,8 +14,8 @@ struct ProductResponseModel: Codable, Equatable {
         return lhs.id == rhs.id
     }
     
-    let id: Int
-    let storeId: Int
+    let id: Int64
+    let storeId: Int64
     let name: String
     let description: String
     let price: Double

@@ -9,13 +9,15 @@
 import Foundation
 
 protocol StoreViewContract: BaseViewContract {
+    func populateTab(cousines: [CousineModel])
     func populate(items: [StoreItem])
     func gotoProducts(store: StoreItem)
     func logout()
 }
 
 protocol StorePresenterContract: BasePresenterContract {
-    func request()
+    func requestCousines()
+    func requestStoresBy(cousine: CousineModel)
     func openProducts(store: StoreItem)
     func logout()
 }

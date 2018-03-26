@@ -8,12 +8,7 @@
 
 import Foundation
 
-class StoreOrder {
+struct StoreOrder {
     var store: StoreItem
-    var order: OrderItem
-    
-    init(store: StoreItem, order: OrderItem) {
-        self.store = store
-        self.order = order
-    }
+    var orders: [OrderItem]
 }

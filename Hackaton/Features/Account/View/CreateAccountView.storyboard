@@ -201,6 +201,7 @@
                         <outlet property="nameTextField" destination="z7B-xI-Ebz" id="YzJ-Bh-FNM"/>
                         <outlet property="passwordTextField" destination="f2L-PD-OE9" id="j40-CA-cjV"/>
                         <outlet property="repeatPasswordTextField" destination="AkU-4t-eUy" id="M9H-T0-b2m"/>
+                        <outlet property="saveButton" destination="Glt-w8-Wr3" id="Mxo-eJ-Y7R"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjH-Mq-zvN" userLabel="First Responder" sceneMemberID="firstResponder"/>

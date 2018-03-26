@@ -13,30 +13,38 @@ class AddressController: BaseTableViewController {
     @IBOutlet weak var contactNameTextField: UITextField!
     @IBOutlet weak var deliveryAddressTextView: UITextView!
     @IBOutlet weak var placeOrdersButton: UIButton!
-    @IBOutlet weak var requestingActivityIndicatorView: UIActivityIndicatorView!
     
-    var orders = [OrderItem]()
+    var orders = [StoreOrder]()
     lazy var presenter = AddressPresenter(view: self)
+    lazy var loadingManager = LoadingManager(at: placeOrdersButton)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupActivityIndicator()
         presenter.set(pickedOrders: orders)
+        loadingManager.set(observer: presenter.orderAPI.requestingObserver)
+        setupView()
     }
     
-    func setupActivityIndicator() {
-        requestingActivityIndicatorView.hidesWhenStopped = true
-        requestingActivityIndicatorView.isHidden = true
+    func setupView() {
+        [contactNameTextField, deliveryAddressTextView].forEach({ item in
+            (item as? UIView)?.layer.borderWidth = 0.5
+            (item as? UIView)?.layer.borderColor = UIColor.lightGray.cgColor
+        })
+        contactNameTextField.setPaddingLeft()
     }
     
     //MARK: Action
     
     @IBAction func placeOrdersTap() {
+        view.endEditing(true)
         presenter.placeOrders(contactName: contactNameTextField.text, deliveryAddress: deliveryAddressTextView.text)
     }
 }
 
 extension AddressController: AddressViewContract {
+    func set(contactName: String?) {
+        contactNameTextField.text = contactName
+    }
     
     func show(error: String) {
         alert(message: error)
@@ -44,16 +52,5 @@ extension AddressController: AddressViewContract {
     
     func success() {
         alert(message: "Orders placed sucessfully")
-    }
-    
-    func showLoading() {
-        requestingActivityIndicatorView.isHidden = false
-        requestingActivityIndicatorView.startAnimating()
-        placeOrdersButton.isHidden = true
-    }
-    
-    func hideLoading() {
-        requestingActivityIndicatorView.stopAnimating()
-        placeOrdersButton.isHidden = false
     }
 }

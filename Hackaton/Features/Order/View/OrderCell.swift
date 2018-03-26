@@ -17,8 +17,8 @@ class OrderCell: UITableViewCell {
     var item: StoreOrder! {
         didSet {
             storeNameLabel.text = item.store.name
-            orderLabel.text = item.order.product.count == 1 ? "There is 1 product in this order" : "There are \(item.order.product.count) products in this order"
-            totalLabel.text = item.order.product.map({ $0.price }).reduce(0.0, +).currency
+            orderLabel.text = item.orders.count == 1 ? "There is 1 product in this order" : "There are \(item.orders.count) products in this order"
+            totalLabel.text = item.orders.map({ $0.total }).reduce(0.0, +).currency
         }
     }
     

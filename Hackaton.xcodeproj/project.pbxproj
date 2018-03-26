@@ -10,6 +10,7 @@
 		1796DDEDC0712908663F9EC1 /* Pods_HackatonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7F2152C6DF638165C922C0 /* Pods_HackatonTests.framework */; };
 		4B8B3D13B6E5F9944678F6B2 /* Pods_HackatonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99011380F37781FAE8A3BA8F /* Pods_HackatonUITests.framework */; };
 		5CE005B698E1D9A1B2DA77F4 /* Pods_Hackaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A00707E4A24B93B3A6A5A6 /* Pods_Hackaton.framework */; };
+		CC13B6852066794200B92660 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC13B6842066794200B92660 /* UITextField+Extension.swift */; };
 		CC685148205D4C35006702C4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC685147205D4C35006702C4 /* LoginController.swift */; };
 		CC68514B205D4C49006702C4 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC68514A205D4C49006702C4 /* LoginView.storyboard */; };
 		CC68514F205D4F03006702C4 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68514E205D4F03006702C4 /* BaseController.swift */; };
@@ -52,6 +53,8 @@
 		CCB406F8205BFE1500E5E4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB406F6205BFE1500E5E4EC /* LaunchScreen.storyboard */; };
 		CCB40703205BFE1500E5E4EC /* HackatonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB40702205BFE1500E5E4EC /* HackatonTests.swift */; };
 		CCB4070E205BFE1500E5E4EC /* HackatonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB4070D205BFE1500E5E4EC /* HackatonUITests.swift */; };
+		CCC3A73C20654C6500A33F59 /* OrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3A73B20654C6500A33F59 /* OrderAPI.swift */; };
+		CCC3A73E2065516B00A33F59 /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3A73D2065516B00A33F59 /* LoadingManager.swift */; };
 		CCC563AC205DA5B000E08818 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563AB205DA5B000E08818 /* Double+Extension.swift */; };
 		CCC563AE205DAA0800E08818 /* AddressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC563AD205DAA0800E08818 /* AddressView.storyboard */; };
 		CCC563B0205DAA2E00E08818 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC563AF205DAA2E00E08818 /* AddressController.swift */; };
@@ -71,6 +74,9 @@
 		CCC563D2205DC13E00E08818 /* CreateAccountView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */; };
 		CCD5EAE7205DC89B00022D8C /* CheckUserLoggedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5EAE6205DC89B00022D8C /* CheckUserLoggedService.swift */; };
 		CCD5EAE9205DD75600022D8C /* StoreOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD5EAE8205DD75600022D8C /* StoreOrder.swift */; };
+		CCD6BA0320657C95000D5B8B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6BA0220657C95000D5B8B /* ColorExtension.swift */; };
+		CCD6BA0520657FF5000D5B8B /* HackatonNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6BA0420657FF5000D5B8B /* HackatonNavigationController.swift */; };
+		CCD6BA0720658117000D5B8B /* CousineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6BA0620658117000D5B8B /* CousineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +103,7 @@
 		99011380F37781FAE8A3BA8F /* Pods_HackatonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99D1620188184FA220005DA /* Pods-HackatonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonTests/Pods-HackatonTests.release.xcconfig"; sourceTree = "<group>"; };
 		C7C53589A279B96CF2B5C447 /* Pods-HackatonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackatonUITests/Pods-HackatonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC13B6842066794200B92660 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		CC685147205D4C35006702C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CC68514A205D4C49006702C4 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		CC68514E205D4F03006702C4 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -145,6 +152,8 @@
 		CCB40709205BFE1500E5E4EC /* HackatonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackatonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB4070D205BFE1500E5E4EC /* HackatonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackatonUITests.swift; sourceTree = "<group>"; };
 		CCB4070F205BFE1500E5E4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC3A73B20654C6500A33F59 /* OrderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAPI.swift; sourceTree = "<group>"; };
+		CCC3A73D2065516B00A33F59 /* LoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
 		CCC563AB205DA5B000E08818 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		CCC563AD205DAA0800E08818 /* AddressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddressView.storyboard; sourceTree = "<group>"; };
 		CCC563AF205DAA2E00E08818 /* AddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
@@ -164,6 +173,9 @@
 		CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountView.storyboard; sourceTree = "<group>"; };
 		CCD5EAE6205DC89B00022D8C /* CheckUserLoggedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedService.swift; sourceTree = "<group>"; };
 		CCD5EAE8205DD75600022D8C /* StoreOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOrder.swift; sourceTree = "<group>"; };
+		CCD6BA0220657C95000D5B8B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		CCD6BA0420657FF5000D5B8B /* HackatonNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackatonNavigationController.swift; sourceTree = "<group>"; };
+		CCD6BA0620658117000D5B8B /* CousineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CousineModel.swift; sourceTree = "<group>"; };
 		D83C6417D7219212F72555DD /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
 		D9A00707E4A24B93B3A6A5A6 /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7F2152C6DF638165C922C0 /* Pods_HackatonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +239,6 @@
 				CCC563B5205DB1EB00E08818 /* Store */,
 				CC68518B205D85BC006702C4 /* Order */,
 				CC685173205D6EA8006702C4 /* Product */,
-				CC685172205D6E68006702C4 /* CreateAccount */,
 				CC685144205D4C18006702C4 /* Login */,
 			);
 			path = Features;
@@ -261,6 +272,8 @@
 				CC68514D205D4EE0006702C4 /* Base */,
 				CC685162205D561D006702C4 /* Extension */,
 				CC6851A2205D9715006702C4 /* Util.swift */,
+				CCC3A73D2065516B00A33F59 /* LoadingManager.swift */,
+				CCD6BA0420657FF5000D5B8B /* HackatonNavigationController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -302,6 +315,8 @@
 				CC685163205D562F006702C4 /* UIViewController+Extension.swift */,
 				CC812691205DA12B00EF4087 /* Date+Extension.swift */,
 				CCC563AB205DA5B000E08818 /* Double+Extension.swift */,
+				CCD6BA0220657C95000D5B8B /* ColorExtension.swift */,
+				CC13B6842066794200B92660 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -332,13 +347,6 @@
 				CC685159205D51E5006702C4 /* BasePresenterContract.swift */,
 			);
 			path = Contracts;
-			sourceTree = "<group>";
-		};
-		CC685172205D6E68006702C4 /* CreateAccount */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		CC685173205D6EA8006702C4 /* Product */ = {
@@ -392,6 +400,7 @@
 		CC68518B205D85BC006702C4 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				CCC3A73A20654C5500A33F59 /* Api */,
 				CC685190205D8C4A006702C4 /* Presenter */,
 				CC68518F205D8C3E006702C4 /* Model */,
 				CC68518E205D8C39006702C4 /* View */,
@@ -486,6 +495,40 @@
 			path = HackatonUITests;
 			sourceTree = "<group>";
 		};
+		CCC3A73A20654C5500A33F59 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CCC3A73B20654C6500A33F59 /* OrderAPI.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CCC3A73F2065792300A33F59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563C9205DBE9300E08818 /* CreateAccountController.swift */,
+				CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCC3A7402065792C00A33F59 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563CD205DBEB100E08818 /* CreateAccountContract.swift */,
+				CCC563CB205DBEA200E08818 /* CreateAccountPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CCC3A7412065793E00A33F59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCC563CF205DBF2C00E08818 /* AccountRequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CCC563B5205DB1EB00E08818 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				CCC563B8205DB21200E08818 /* StoreItem.swift */,
+				CCD6BA0620658117000D5B8B /* CousineModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -534,11 +578,9 @@
 		CCC563C8205DBDEB00E08818 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				CCC563C9205DBE9300E08818 /* CreateAccountController.swift */,
-				CCC563CB205DBEA200E08818 /* CreateAccountPresenter.swift */,
-				CCC563CD205DBEB100E08818 /* CreateAccountContract.swift */,
-				CCC563CF205DBF2C00E08818 /* AccountRequestModel.swift */,
-				CCC563D1205DC13E00E08818 /* CreateAccountView.storyboard */,
+				CCC3A73F2065792300A33F59 /* View */,
+				CCC3A7402065792C00A33F59 /* Presenter */,
+				CCC3A7412065793E00A33F59 /* Model */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -855,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC13B6852066794200B92660 /* UITextField+Extension.swift in Sources */,
 				CC685156205D50F9006702C4 /* LoginPresenter.swift in Sources */,
 				CC812690205D9BB200EF4087 /* OrderResponseModel.swift in Sources */,
 				CC685161205D54DC006702C4 /* LoginRequestModel.swift in Sources */,
@@ -882,16 +925,21 @@
 				CC68517C205D6EF1006702C4 /* ProductResponseModel.swift in Sources */,
 				CCC563B2205DAA9E00E08818 /* AddressContract.swift in Sources */,
 				CCC563C7205DB7D200E08818 /* LoginAPI.swift in Sources */,
+				CCC3A73C20654C6500A33F59 /* OrderAPI.swift in Sources */,
 				CC685167205D5703006702C4 /* AppConfig.swift in Sources */,
 				CC68518A205D7866006702C4 /* ControllerType.swift in Sources */,
+				CCD6BA0720658117000D5B8B /* CousineModel.swift in Sources */,
 				CC68516E205D5E13006702C4 /* HackathonError.swift in Sources */,
 				CC685153205D4F44006702C4 /* BaseGenericTableViewController.swift in Sources */,
+				CCD6BA0520657FF5000D5B8B /* HackatonNavigationController.swift in Sources */,
 				CCC563AC205DA5B000E08818 /* Double+Extension.swift in Sources */,
 				CC685158205D5152006702C4 /* LoginContract.swift in Sources */,
 				CCC563B0205DAA2E00E08818 /* AddressController.swift in Sources */,
 				CC685148205D4C35006702C4 /* LoginController.swift in Sources */,
 				CC685175205D6EB9006702C4 /* ProductController.swift in Sources */,
 				CC6851A3205D9715006702C4 /* Util.swift in Sources */,
+				CCC3A73E2065516B00A33F59 /* LoadingManager.swift in Sources */,
+				CCD6BA0320657C95000D5B8B /* ColorExtension.swift in Sources */,
 				CCC563CC205DBEA200E08818 /* CreateAccountPresenter.swift in Sources */,
 				CCD5EAE9205DD75600022D8C /* StoreOrder.swift in Sources */,
 				CC68514F205D4F03006702C4 /* BaseController.swift in Sources */,
@@ -1065,6 +1113,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B48G75GHE4;
 				INFOPLIST_FILE = Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrf.local.Hackaton;
@@ -1080,6 +1129,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B48G75GHE4;
 				INFOPLIST_FILE = Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrf.local.Hackaton;

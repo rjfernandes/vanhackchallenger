@@ -18,7 +18,7 @@ class HackathonAPI {
         return nil
     }
     
-    func requestData(endpoint: String, method: HTTPMethod, dictionary: [String: Any]? = nil, completion: @escaping (Data?, HackathonAPIError?) -> Void) {
+    func requestData(endpoint: String, method: HTTPMethod = .get, dictionary: [String: Any]? = nil, completion: @escaping (Data?, HackathonAPIError?) -> Void) {
         let url = "\(AppConfig.baseEndpoint)\(endpoint)"
         print(url)
         print(dictionary ?? "") 
@@ -51,7 +51,7 @@ class HackathonAPI {
         }
     }
     
-    func requestFrom<R: Decodable>(endpoint: String, method: HTTPMethod, dictionary: [String: Any]? = nil, completion: @escaping (R?, HackathonAPIError?) -> Void) {
+    func requestFrom<R: Decodable>(endpoint: String, method: HTTPMethod = .get, dictionary: [String: Any]? = nil, completion: @escaping (R?, HackathonAPIError?) -> Void) {
         
         requestData(endpoint: endpoint, method: method, dictionary: dictionary) { (data, error) in
             if let error = error {
@@ -74,7 +74,7 @@ class HackathonAPI {
         }
     }
     
-    func request<T: HackathonRequestProtocol, R: Decodable>(_ request: T, method: HTTPMethod, completion: @escaping (R?, HackathonAPIError?) -> Void) {
+    func request<T: HackathonRequestProtocol, R: Decodable>(_ request: T, method: HTTPMethod = .get, completion: @escaping (R?, HackathonAPIError?) -> Void) {
         
         do {
             let data = try JSONEncoder().encode(request)

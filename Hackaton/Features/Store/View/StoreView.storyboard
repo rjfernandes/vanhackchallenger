@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,8 +67,66 @@
                             <outlet property="delegate" destination="5fX-90-3AG" id="tQQ-Lr-vw2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="amountOrdersLabel" destination="FIt-Hc-C0V" id="g5m-aL-C60"/>
+                        <outlet property="placeOrdersButton" destination="Sqh-aw-QU0" id="3Rb-DU-nVv"/>
+                        <outlet property="placeOrdersView" destination="iVb-Zz-Oun" id="UUv-Y6-YvH"/>
+                        <outlet property="totalOrdersLabel" destination="sMf-4t-1Hy" id="eTp-Hj-0JM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5DO-tm-qAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="iVb-Zz-Oun">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-Hc-C0V">
+                            <rect key="frame" x="16" y="2" width="224" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="wa4-Ek-CGd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqh-aw-QU0">
+                            <rect key="frame" x="248" y="6" width="120" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="aQp-a8-b2p"/>
+                                <constraint firstAttribute="height" constant="30" id="psK-ya-Za5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Place Orders">
+                                <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="placeOrder" destination="5fX-90-3AG" eventType="touchUpInside" id="eYy-pe-dnN"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMf-4t-1Hy">
+                            <rect key="frame" x="16" y="24" width="224" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="fX3-j8-hgH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="FIt-Hc-C0V" firstAttribute="leading" secondItem="0yn-m3-qZ9" secondAttribute="leading" constant="16" id="0G2-iw-xIz"/>
+                        <constraint firstItem="FIt-Hc-C0V" firstAttribute="top" secondItem="0yn-m3-qZ9" secondAttribute="top" constant="2" id="3rn-Gj-eRH"/>
+                        <constraint firstItem="sMf-4t-1Hy" firstAttribute="leading" secondItem="0yn-m3-qZ9" secondAttribute="leading" constant="16" id="6XX-m8-l1N"/>
+                        <constraint firstItem="Sqh-aw-QU0" firstAttribute="top" secondItem="0yn-m3-qZ9" secondAttribute="top" constant="6" id="DGe-Fn-i2u"/>
+                        <constraint firstItem="sMf-4t-1Hy" firstAttribute="top" secondItem="FIt-Hc-C0V" secondAttribute="bottom" id="GHe-Un-f78"/>
+                        <constraint firstItem="0yn-m3-qZ9" firstAttribute="trailing" secondItem="Sqh-aw-QU0" secondAttribute="trailing" constant="7" id="KvY-Tq-rN8"/>
+                        <constraint firstItem="Sqh-aw-QU0" firstAttribute="leading" secondItem="sMf-4t-1Hy" secondAttribute="trailing" constant="8" id="a0t-uC-HrC"/>
+                        <constraint firstItem="Sqh-aw-QU0" firstAttribute="leading" secondItem="FIt-Hc-C0V" secondAttribute="trailing" constant="8" id="j7t-du-p9j"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="0yn-m3-qZ9"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-276" y="71.514242878560722"/>
         </scene>

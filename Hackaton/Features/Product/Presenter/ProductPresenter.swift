@@ -37,10 +37,8 @@ class ProductPresenter: BasePresenter<ProductViewContract>, ProductPresenterCont
     }
     
     func createOrder(cart: [ProductResponseModel]) {
-        let orderItem = OrderItem(id: 0, orderId: 0, productId: 0, price: 0.0, quantity: Int64(cart.count), total: cart.map({ $0.price }).reduce(0.0, +), product: cart)
-
-        orders += [ StoreOrder(store: store, order: orderItem) ]
-        
+        let orderItems = cart.map({ OrderItem(product: $0) })
+        orders += [ StoreOrder(store: store, orders: orderItems) ]
         view.backToStores()
     }
     

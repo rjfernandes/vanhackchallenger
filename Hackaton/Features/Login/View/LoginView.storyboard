@@ -130,8 +130,9 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="emailTextView" destination="AH6-H6-BOs" id="sI2-Jq-9Wq"/>
-                        <outlet property="passwordTextView" destination="ORB-vX-Faf" id="2tw-9n-EhD"/>
+                        <outlet property="emailTextField" destination="AH6-H6-BOs" id="sCh-pa-ySw"/>
+                        <outlet property="loginButton" destination="gE1-nk-6IF" id="w92-CQ-e7Q"/>
+                        <outlet property="passwordTextField" destination="ORB-vX-Faf" id="5lg-h4-7sG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjF-8v-f7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
